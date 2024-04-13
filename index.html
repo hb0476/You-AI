@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Arena Website</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        /* Add more styles for buttons, images, and other elements */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Sports Arena</h1>
+        <!-- Add navigation links here -->
+    </header>
+    <main>
+        <!-- Add buttons, images, and other content here -->
+        <section class="sports-list">
+            <h2>List of Sports Available</h2>
+            <ul>
+                <li>Football - $20 per hour <button onclick="calculateTotal(20)">Book</button></li>
+                <li>Basketball - $15 per hour <button onclick="calculateTotal(15)">Book</button></li>
+                <!-- Add other sports and prices -->
+            </ul>
+        </section>
+        <section class="booking-section">
+            <h2>Book Your Slot</h2>
+            <label for="timeSlot">Select Time Slot:</label>
+            <select id="timeSlot">
+                <option value="1">9:00 AM - 10:00 AM</option>
+                <option value="2">10:00 AM - 11:00 AM</option>
+                <!-- Add more time slots -->
+            </select>
+            <button onclick="generateReceipt()">Confirm Booking</button>
+        </section>
+        <section class="receipt">
+            <h2>Receipt</h2>
+            <p>Total Cost: <span id="totalCost">$0</span></p>
+        </section>
+    </main>
+    <footer>
+        <p>Opening Hours: Monday-Sunday, 9:00 AM - 10:00 PM</p>
+        <p>Location: [Add location here]</p>
+        <a href="#">Customer Reviews</a>
+    </footer>
+    <script>
+        // JavaScript code goes here
+        function calculateTotal(price) {
+            const selectedTimeSlot = document.getElementById('timeSlot').value;
+            const totalCost = price * selectedTimeSlot;
+            document.getElementById('totalCost').textContent = '$' + totalCost;
+        }
+
+        function generateReceipt() {
+            // Add functionality to generate receipt
+        }
+    </script>
+</body>
+</html>
